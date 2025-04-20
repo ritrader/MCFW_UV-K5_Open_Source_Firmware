@@ -106,7 +106,7 @@ ENABLE_DOCK 	                  			:= 0
 
 # ----- LOGO: ON/OFF Thanks to PixelGirl
 # 1348 bytes
-ENABLE_LOGO									:= 1
+# ENABLE_LOGO									:= 1
 
 #Thanks to KD8CEC for sharing his code / We have to check the code better, i just code & paste it to the right places...
 # 1476 bytes
@@ -433,8 +433,8 @@ endif
 ifeq ($(ENABLE_SCANLIST),1)
 	CFLAGS += -DENABLE_SCANLIST
 endif
-ifeq ($(ENABLE_LOGO),1)
-	CFLAGS += -DENABLE_LOGO
+# ifeq ($(ENABLE_LOGO),1)
+# 	CFLAGS += -DENABLE_LOGO
 endif
 #LDFLAGS += -z noexecstack -mcpu=cortex-m0 -nostartfiles -Wl,-L,linker -Wl,-T,firmware.ld -Wl,--gc-sections
 LDFLAGS = -mcpu=cortex-m0 -nostartfiles -Wl,-T,firmware.ld
